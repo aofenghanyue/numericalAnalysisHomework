@@ -19,17 +19,24 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="common_tools.cpp" />
-    <ClCompile Include="inverse_power_method.cpp" />
-    <ClCompile Include="LU_decomposition.cpp" />
-    <ClCompile Include="power_method.cpp" />
-    <ClCompile Include="main_func.cpp" />
+    <ClCompile Include="main_fun.cpp" />
+    <ClCompile Include="homework1.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="commons.h" />
     <ClInclude Include="common_tools.h" />
+    <ClInclude Include="Gauss.h" />
+    <ClInclude Include="homework2.h" />
+    <ClInclude Include="homework3.h" />
     <ClInclude Include="inverse_power_method.h" />
+    <ClInclude Include="BivariatePolynomialFitting.h" />
     <ClInclude Include="LU_decomposition.h" />
+    <ClInclude Include="LU_decomposition_old.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MultidimensionNewtonRoot.h" />
     <ClInclude Include="power_method.h" />
+    <ClInclude Include="QR_decomposition.h" />
+    <ClInclude Include="Vector.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

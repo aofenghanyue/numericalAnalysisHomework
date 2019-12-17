@@ -3,7 +3,7 @@
 
 #include<iostream>
 #include"common_tools.h"
-#include"LU_decomposition.h"
+#include"LU_decomposition_old.h"
 #include<vector>
 #include"ctime"
 
@@ -47,33 +47,35 @@ template <typename T> T inverse_power_method(vector<vector<T> >& mtr, int s = -1
 		y_k = u_k / u_k_norm_inf;
 
 		// 求解A*uk = yk
-		//u_k = back_substitution(mtr, y_k);
-		int temp = 0;
-		double temp_sum = 0;
+		u_k = back_substitution(mtr, y_k);//用这个函数很慢，用下面的替换后飞快
+		//int temp = 0;
+		//double temp_sum = 0;
 
-		for (int i = 1; i < row; i++) {
-			temp = max(0, i - s);
-			temp_sum = 0;
-			for (int t = temp; t < i; t++) {
-				temp_sum -= mtr[i][t] * y_k[t];
-			}
-			y_k[i] = y_k[i] + temp_sum;
-		}
+		//for (int i = 1; i < row; i++) {
+		//	temp = max(0, i - s);
+		//	temp_sum = 0;
+		//	for (int t = temp; t < i; t++) {
+		//		temp_sum -= mtr[i][t] * y_k[t];
+		//	}
+		//	y_k[i] = y_k[i] + temp_sum;
+		//}
 
-		// Ux = y
-		y_k[row - 1] = y_k[row - 1] / mtr[row - 1][col - 1];
-		for (int i = row - 2; i >= 0; i--) {
-			temp = min(i + s + 1, col);
-			temp_sum = 0;
-			for (int t = i + 1; t < temp; t++) {
-				temp_sum -= mtr[i][t] * y_k[t];
-			}
-			y_k[i] = (y_k[i] + temp_sum) / mtr[i][i];
-		}
+		//// Ux = y
+		//y_k[row - 1] = y_k[row - 1] / mtr[row - 1][col - 1];
+		//for (int i = row - 2; i >= 0; i--) {
+		//	temp = min(i + s + 1, col);
+		//	temp_sum = 0;
+		//	for (int t = i + 1; t < temp; t++) {
+		//		temp_sum -= mtr[i][t] * y_k[t];
+		//	}
+		//	y_k[i] = (y_k[i] + temp_sum) / mtr[i][i];
+		//}
 
-		for (int i = 0; i < row; i++) {
-			u_k[i] = y_k[i];
-		}
+		//for (int i = 0; i < row; i++) {
+		//	u_k[i] = y_k[i];
+		//}
+		// 替换截止这里
+
 		beta_k = sgn_hr * u_k[norm_index];
 
 		epsilon = fabs(beta_k - beta_k_1) / fabs(beta_k);

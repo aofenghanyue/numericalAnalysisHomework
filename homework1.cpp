@@ -5,7 +5,7 @@
 #include "common_tools.h"
 #include "power_method.h"
 #include "inverse_power_method.h"
-#include "LU_decomposition.h"
+#include "LU_decomposition_old.h"
 #include <fstream>
 #include <ctime>
 
@@ -13,7 +13,7 @@ using namespace std;
 typedef vector<vector<double> > matrix;
 vector<vector<double> > creat_matrix(int, int);
 
-int main() {
+int homework1() {
 	// 打开文件
 	ofstream out_file;
 	out_file.setf(ios::scientific, ios::floatfield);

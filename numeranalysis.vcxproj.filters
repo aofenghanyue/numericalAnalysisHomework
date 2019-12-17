@@ -15,19 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="common_tools.cpp">
+    <ClCompile Include="homework1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="power_method.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="inverse_power_method.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="LU_decomposition.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="main_func.cpp">
+    <ClCompile Include="main_fun.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -39,6 +30,36 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="inverse_power_method.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="QR_decomposition.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commons.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="homework2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Gauss.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MultidimensionNewtonRoot.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="homework3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BivariatePolynomialFitting.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LU_decomposition_old.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="LU_decomposition.h">
